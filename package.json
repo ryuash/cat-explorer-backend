@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.ts",
-    "parser": "nodemon ./parser/index.ts",
+    "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./src/index.ts",
+    "parser": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./parser/index.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,11 +19,14 @@
     "eslint": "^8.9.0",
     "nodemon": "^2.0.15",
     "ts-node": "^10.5.0",
+    "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.5"
   },
   "dependencies": {
     "@types/pg": "^8.6.4",
+    "axios": "^0.25.0",
     "dotenv": "^16.0.0",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "ramda": "^0.28.0"
   }
 }
