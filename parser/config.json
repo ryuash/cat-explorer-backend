@@ -1,0 +1,8 @@
+{
+  "db": {
+    "insertBatchLimit": 10
+  },
+  "parse": {
+    "modules": []
+  }
+}

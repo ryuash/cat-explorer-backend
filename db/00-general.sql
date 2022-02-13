@@ -3,19 +3,20 @@
 ------------------------------------------------
 CREATE TABLE block
 (
-    height BIGINT UNIQUE PRIMARY KEY,
-    hash TEXT NOT NULL UNIQUE,
-    chain_id VARCHAR(50) NOT NULL,
+    height BIGINT,
+    hash TEXT NOT NULL DEFAULT '',
+    chain_id VARCHAR(50) NOT NULL DEFAULT 'unknown',
     num_txs INT DEFAULT 0,
     proposer TEXT NOT NULL DEFAULT '',
     status VARCHAR(15) NOT NULL DEFAULT 'incomplete' CHECK (status IN ('incomplete', 'in_progress', 'complete')),
-    timestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL
+    timestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW()::timestamp
 );
 ------------------------------------------------
 -- Index on height for faster search
 -- Index on chain_id in case the database has data from previous chains
 -- Index on status for faster search / reset
 ------------------------------------------------
+ALTER TABLE block ADD UNIQUE (height, chain_id);
 CREATE INDEX block_height_index ON block (height);
 CREATE INDEX block_chain_id_index ON block (chain_id);
 CREATE INDEX block_status_index ON block (status) WHERE status <> 'complete';

@@ -1,7 +1,5 @@
 require('dotenv').config();
-const addBlocksToQueue = require('./actions/add_blocks_to_queue');
-
-console.log('parser starts here');
+const addBlocksToQueue = require('./utils/add_blocks_to_queue');
 
 // On start reset all block and tx that are `in_progress` back to incompete
 
@@ -9,6 +7,6 @@ console.log('parser starts here');
 
 const start = async () => {
   await addBlocksToQueue();
-}
+};
 
 start();

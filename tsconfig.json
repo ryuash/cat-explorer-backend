@@ -11,7 +11,8 @@
     "declaration": true,
     "baseUrl": ".",
     "paths": {
-      "@db": ["parser/db"]
+      "@db": ["parser/db"],
+      "@parser/*": ["parser/*"]
     },
   },
   "exclude":[
