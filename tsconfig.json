@@ -11,11 +11,12 @@
     "declaration": true,
     "baseUrl": ".",
     "paths": {
-      "@db": ["parser/db"],
-      "@parser/*": ["parser/*"]
+      "@db": ["src/db"],
+      "@parser/*": ["src/*"]
     },
   },
   "exclude":[
-    "./node_modules"
+    "dist",
+    "node_modules"
   ]
 }

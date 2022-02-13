@@ -1,6 +1,6 @@
 require('dotenv').config();
 const pgPromise = require('pg-promise')({
-  capSQL: true
+  capSQL: true,
 });
 
 // pgPromise.pg.types.setTypeParser(20, BigInt);
