@@ -1,1 +1,1 @@
-Doing a quick studies on parsers.
+Doing a quick study on parsers.
