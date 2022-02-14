@@ -4,12 +4,6 @@ const Big = require('big.js');
 const config = require('@parser/config');
 const { db, pgp } = require('@db');
 
-type QueueLaterBlocks = {
-  nodeLatestBlock: number;
-  nodeEarliestBlock: number;
-  chain_id: string;
-}
-
 type QueueEarlierBlocks = {
   nodeEarliestBlock: number;
   chain_id: string;
