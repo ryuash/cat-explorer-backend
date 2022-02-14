@@ -9,10 +9,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@db": ["src/db"],
-      "@parser/*": ["src/*"]
+      "@db": ["parser/db"],
+      "@config": ["parser/config.json"]
     }
   },
   "exclude":[

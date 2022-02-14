@@ -1,6 +1,4 @@
 import Big from 'big.js';
-import config from '@parser/config';
-import { db, pgp } from '@db';
 import { queueEarlierBlocks, queueLaterBlocks } from './utils';
 
 export const addBlocksToQueue = async () => {

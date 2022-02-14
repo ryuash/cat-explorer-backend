@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./src/index.ts",
-    "start": "node -r tsconfig-paths/register dist/src/index.js",
+    "parser:dev": "NODE_ENV=development nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./parser/index.ts",
+    "parser:start": "NODE_ENV=production node -r tsconfig-paths/register dist/parser/index.js",
     "build": "tsc && tsc-alias",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

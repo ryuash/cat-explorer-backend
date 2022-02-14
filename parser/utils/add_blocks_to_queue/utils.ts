@@ -1,7 +1,7 @@
 import Big from 'big.js';
 import * as R from 'ramda';
-import config from '@parser/config';
-import { db, pgp } from '@db';
+import config from '@config';
+import { db, pgp } from 'parser/db';
 import { QueueEarlierBlocks, QueueLaterBlocks } from './types';
 
 /**
