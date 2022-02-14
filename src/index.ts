@@ -1,5 +1,5 @@
-require('dotenv').config();
-const addBlocksToQueue = require('./utils/add_blocks_to_queue');
+import 'dotenv/config';
+import { addBlocksToQueue } from './utils/add_blocks_to_queue';
 
 // On start reset all block and tx that are `in_progress` back to incompete
 

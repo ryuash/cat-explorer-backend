@@ -12,8 +12,30 @@
         "sourceType": "module"
     },
     "plugins": [
+        "import",
         "@typescript-eslint"
     ],
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
     "rules": {
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "camelcase": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "never",
+              "jsx": "never",
+              "ts": "never",
+              "tsx": "never"
+            }
+        ]
     }
 }

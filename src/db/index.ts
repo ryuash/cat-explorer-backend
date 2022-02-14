@@ -1,13 +1,8 @@
-require('dotenv').config();
-const pgPromise = require('pg-promise')({
+import 'dotenv/config';
+import pgPromise from 'pg-promise';
+
+export const pgp = pgPromise({
   capSQL: true,
 });
 
-// pgPromise.pg.types.setTypeParser(20, BigInt);
-
-const pgpConnection = pgPromise(process.env.PG_DATABASE_URL);
-
-module.exports = {
-  db: pgpConnection,
-  pgp: pgPromise,
-};
+export const db = pgp(process.env.PG_DATABASE_URL as string);
