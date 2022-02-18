@@ -35,7 +35,7 @@ CREATE TABLE transaction
 (
   hash TEXT NOT NULL,
   height BIGINT NOT NULL,
-  success BOOLEAN NOT NULL,
+  success BOOLEAN NOT NULL DEFAULT false,
   memo TEXT,
   messages JSONB NOT NULL DEFAULT '[]'::JSONB,
   fee JSONB NOT NULL DEFAULT '{}'::JSONB,
@@ -44,8 +44,7 @@ CREATE TABLE transaction
   raw_log TEXT,
   logs JSONB NOT NULL DEFAULT '[]'::JSONB,
   status VARCHAR(15) NOT NULL DEFAULT 'incomplete' CHECK (status IN ('incomplete', 'in_progress', 'complete', 'error')),
-  partition_id INT NOT NULL,
-  CHECK (height / 1000 = partition_id)
+  partition_id INT NOT NULL
 ) PARTITION BY LIST(partition_id);
 ------------------------------------------------
 -- Index on height for faster search

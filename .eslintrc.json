@@ -24,6 +24,7 @@
         }
     },
     "rules": {
+        "no-template-curly-in-string": "off",
         "import/no-cycle": "off",
         "no-await-in-loop": "off",
         "import/prefer-default-export": "off",

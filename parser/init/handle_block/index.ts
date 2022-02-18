@@ -9,11 +9,10 @@ import { hexToBech32, createPartition } from '@utils';
 // generic handle block that calls on other handle blocks
 export const handleBlock = async (height: number) => {
   try {
-    console.log(height, 'height');
     // get block data
     const { data: block } = await axios.get(BLOCKS_DETAILS_RPC, {
       params: {
-        height: 2296676,
+        height,
       },
     });
 
@@ -21,27 +20,42 @@ export const handleBlock = async (height: number) => {
     const txs = R.pathOr([], ['result', 'block', 'data', 'txs'], block);
     const numTxs = txs.length;
     const proposerConsensus = hexToBech32(R.pathOr('', ['result', 'block', 'header', 'proposer_address'], block), config.prefix.consensus);
+    const partitionId = Math.floor(height / config.db.partitionBy);
 
     // create partition table if not exist
     if (numTxs) {
-      createPartition(TABLES.TRANSACTION, Math.floor(height / config.db.partitionBy));
+      await createPartition(TABLES.TRANSACTION, partitionId);
     }
 
     // create the tx by hash
-    // const queueTxs = txs.map(async (x) => {
-    //   const txHash = shajs('sha256').update(Buffer.from(x, 'base64')).digest('hex').toUpperCase();
+    const queueTxs = txs.map(async (x) => {
+      const txHash = shajs('sha256').update(Buffer.from(x, 'base64')).digest('hex').toUpperCase();
 
-    //   await db.query(
-    //     `INSERT INTO transaction (hash, height, partition_id)
-    //     VALUES (1, 'A', 'X'), (2, 'B', 'Y'), (3, 'C', 'Z')
-    //     ON CONFLICT (id) DO NOTHING`,
-    //   );
+      await db.any(
+        'INSERT INTO transaction (hash, height, partition_id) VALUES($1, $2, $3) ON CONFLICT DO NOTHING',
+        [
+          txHash,
+          height,
+          partitionId,
+        ],
+      );
+    });
 
-    //   console.log(txHash, 'hash');
-    // });
+    await Promise.allSettled(queueTxs);
 
     // update block with the following and status complete
-  } catch (error: any) {
-    console.log(error, 'error in here');
+    await db.query(
+      `UPDATE block SET status = 'complete', hash = $1, num_txs = $2, proposer = $3 WHERE height = ${height}`,
+      [
+        hash,
+        numTxs,
+        proposerConsensus,
+      ],
+    );
+  } catch (error) {
+    await db.query(
+      `UPDATE block SET status = 'error' WHERE height = ${height}`,
+    );
+    // throw new Error(`Could not parse block height: ${height}`);
   }
 };
