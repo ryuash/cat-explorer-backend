@@ -8,7 +8,7 @@ CREATE TABLE block
     chain_id VARCHAR(50) NOT NULL DEFAULT 'unknown',
     num_txs INT DEFAULT 0,
     proposer TEXT NOT NULL DEFAULT '',
-    status VARCHAR(15) NOT NULL DEFAULT 'incomplete' CHECK (status IN ('incomplete', 'in_progress', 'complete')),
+    status VARCHAR(15) NOT NULL DEFAULT 'incomplete' CHECK (status IN ('incomplete', 'in_progress', 'complete', 'error')),
     timestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW()::timestamp
 );
 ------------------------------------------------
@@ -43,7 +43,7 @@ CREATE TABLE transaction
   gas_used BIGINT DEFAULT 0,
   raw_log TEXT,
   logs JSONB NOT NULL DEFAULT '[]'::JSONB,
-  status VARCHAR(15) NOT NULL DEFAULT 'incomplete' CHECK (status IN ('incomplete', 'in_progress', 'complete')),
+  status VARCHAR(15) NOT NULL DEFAULT 'incomplete' CHECK (status IN ('incomplete', 'in_progress', 'complete', 'error')),
   partition_id INT NOT NULL,
   CHECK (height / 1000 = partition_id)
 ) PARTITION BY LIST(partition_id);

@@ -13,7 +13,9 @@
     "baseUrl": ".",
     "paths": {
       "@db": ["parser/db"],
-      "@config": ["parser/config.json"]
+      "@config": ["parser/config.json"],
+      "@api": ["parser/api"],
+      "@utils": ["parser/utils"],
     }
   },
   "exclude":[

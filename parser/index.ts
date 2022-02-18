@@ -3,7 +3,7 @@ import {
   initialReset,
   addBlocksToQueue,
   assignBlocksToWorkers,
-} from './utils';
+} from './init';
 
 // On start reset all block and tx that are `in_progress` back to incompete
 
