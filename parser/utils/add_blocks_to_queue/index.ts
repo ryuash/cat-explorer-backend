@@ -5,7 +5,7 @@ export const addBlocksToQueue = async () => {
   try {
     console.log('Adding Blocks to Queue: Start');
     // get latest block + earlier block using rpc status
-    const nodeLatestBlock = Big('28').toNumber();
+    const nodeLatestBlock = Big('3').toNumber();
     const nodeEarliestBlock = Big('1').toNumber();
     const chain_id = 'unknown';
 

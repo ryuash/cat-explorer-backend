@@ -73,9 +73,9 @@ export const queueLaterBlocks = async ({
   if (latestBlockInTable < nodeEarliestBlock) {
     referenceBlockStart = nodeEarliestBlock;
   }
-
-  if (referenceBlockEnd - referenceBlockStart > config.db.insertBatchLimit) {
-    referenceBlockEnd = referenceBlockStart + config.db.insertBatchLimit;
+  console.log(referenceBlockEnd - referenceBlockStart - 1, 'test');
+  if (referenceBlockEnd - referenceBlockStart >= config.db.insertBatchLimit) {
+    referenceBlockEnd = referenceBlockStart + config.db.insertBatchLimit - 1;
   }
 
   const dataToBeInserted = [];
