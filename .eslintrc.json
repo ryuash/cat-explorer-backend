@@ -24,6 +24,8 @@
         }
     },
     "rules": {
+        "import/no-cycle": "off",
+        "no-await-in-loop": "off",
         "import/prefer-default-export": "off",
         "@typescript-eslint/no-var-requires": "off",
         "camelcase": "off",

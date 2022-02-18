@@ -1,6 +1,7 @@
 import Big from 'big.js';
 import { queueEarlierBlocks, queueLaterBlocks } from './utils';
 
+// run a cron job
 export const addBlocksToQueue = async () => {
   try {
     console.log('Adding Blocks to Queue: Start');

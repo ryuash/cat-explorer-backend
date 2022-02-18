@@ -40,9 +40,9 @@ export const queueEarlierBlocks = async ({
         chain_id,
       });
     }
-    console.log(dataToBeInserted, 'early');
-    // const query = pgp.helpers.insert(dataToBeInserted, columnSet);
-    // await db.none(query);
+    // console.log(dataToBeInserted, 'early');
+    const query = pgp.helpers.insert(dataToBeInserted, columnSet);
+    await db.none(query);
   }
 };
 
@@ -90,7 +90,7 @@ export const queueLaterBlocks = async ({
       chain_id,
     });
   }
-  console.log(dataToBeInserted, 'after');
-  // const query = pgp.helpers.insert(dataToBeInserted, columnSet);
-  // await db.none(query);
+  // console.log(dataToBeInserted, 'after');
+  const query = pgp.helpers.insert(dataToBeInserted, columnSet);
+  await db.none(query);
 };
