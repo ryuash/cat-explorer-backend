@@ -6,3 +6,7 @@ export const pgp = pgPromise({
 });
 
 export const db = pgp(process.env.PG_DATABASE_URL as string);
+
+export const TABLES = {
+  TRANSACTION: 'transaction',
+};

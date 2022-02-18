@@ -1,6 +1,7 @@
 {
   "db": {
-    "insertBatchLimit": 10
+    "insertBatchLimit": 10,
+    "partitionBy": 1000
   },
   "parse": {
     "modules": []
