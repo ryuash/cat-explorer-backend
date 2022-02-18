@@ -4,5 +4,10 @@
   },
   "parse": {
     "modules": []
+  },
+  "prefix": {
+    "consensus": "desmosvalcons",
+    "validator": "desmosvaloper",
+    "account": "desmos"
   }
 }
