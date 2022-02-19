@@ -23,6 +23,26 @@
             "typescript": {}
         }
     },
+    "overrides": [
+        {
+            "files": [
+            "parser/**/types.ts"
+            ],
+            "rules": {
+            "no-unused-vars": "off"
+            }
+        },
+        {
+            "files": [
+            "**/*.test.*",
+            "**/*.spec.ts"
+            ],
+            "rules": {
+            "no-undef": "off",
+            "import/no-extraneous-dependencies": "off"
+            }
+        }
+    ],
     "rules": {
         "no-template-curly-in-string": "off",
         "import/no-cycle": "off",
