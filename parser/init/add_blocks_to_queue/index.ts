@@ -1,7 +1,7 @@
 import Big from 'big.js';
 import * as R from 'ramda';
 import axios from 'axios';
-import { NODE_STATUS } from '@api';
+import { NODE_STATUS_RPC } from '@api';
 import { queueEarlierBlocks, queueLaterBlocks } from './utils';
 
 // run a cron job
@@ -9,7 +9,7 @@ export const addBlocksToQueue = async () => {
   try {
     console.log('Adding Blocks to Queue: Start');
     // get latest block + earlier block using rpc status
-    const { data: nodeData } = await axios.get(NODE_STATUS);
+    const { data: nodeData } = await axios.get(NODE_STATUS_RPC);
 
     const chain_id = R.pathOr('unknown', ['result', 'node_info', 'network'], nodeData);
 
