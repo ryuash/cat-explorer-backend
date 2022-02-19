@@ -16,6 +16,7 @@
       "@config": ["parser/config.json"],
       "@api": ["parser/api"],
       "@utils": ["parser/utils"],
+      "@tests*": ["parser/tests/*"]
     }
   },
   "exclude":[
