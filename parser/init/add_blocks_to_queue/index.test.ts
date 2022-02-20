@@ -1,4 +1,4 @@
-import { pgp } from '@db';
+import { db, pgp } from '@db';
 import {
   setupTables, tearDownData, tearDownTables,
 } from '@tests/utils';
@@ -11,7 +11,7 @@ afterAll(async () => {
   pgp.end();
 });
 
-describe('Integration test cases', () => {
+describe('init/addBlocksToQueue', () => {
   afterEach(async () => {
     await tearDownData();
   });
