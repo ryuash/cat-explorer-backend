@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "parser:dev": "NODE_ENV=development nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./parser/index.ts",
-    "parser:start": "NODE_ENV=production node -r tsconfig-paths/register dist/parser/index.js",
+    "dev": "NODE_ENV=development nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./parser/index.ts",
+    "start": "NODE_ENV=production node -r tsconfig-paths/register dist/parser/index.js",
     "build": "tsc && tsc-alias",
     "test": "cross-env NODE_ENV=test jest"
   },

@@ -16,11 +16,15 @@
       "@config": ["parser/config.json"],
       "@api": ["parser/api"],
       "@utils": ["parser/utils"],
-      "@tests*": ["parser/tests/*"]
+      "@tests*": ["parser/tests/*"],
+      "@grpc/client": ["parser/grpc"],
+      "@proto*": ["parser/grpc/proto/*"],
     }
   },
   "exclude":[
     "dist",
-    "node_modules"
+    "node_modules",
+    "proto",
+    "db"
   ]
 }

@@ -1,4 +1,7 @@
 import 'dotenv/config';
+import util from 'util';
+import { baseClient } from '@grpc/client';
+import { GetLatestBlockRequest } from '@proto/cosmos/base/tendermint/v1beta1/query_pb';
 import {
   initialReset,
   addBlocksToQueue,
@@ -17,6 +20,15 @@ const start = async () => {
   // await initialReset();
   // await addBlocksToQueue();
   // assignBlocksToWorkers();
+
+  // baseClient.getLatestBlock(new GetLatestBlockRequest(), (err, result) => {
+  //   if (err) {
+  //     console.log(err);
+  //     return;
+  //   }
+  //   const showAll = result?.toObject();
+  //   console.log(util.inspect(showAll, false, null, true /* enable colors */));
+  // });
 };
 
 start();
