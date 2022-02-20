@@ -4,7 +4,7 @@
 // file: cosmos/params/v1beta1/query.proto
 
 import * as cosmos_params_v1beta1_query_pb from "../../../cosmos/params/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   params: grpc.MethodDefinition<cosmos_params_v1beta1_query_pb.QueryParamsRequest, cosmos_params_v1beta1_query_pb.QueryParamsResponse>;

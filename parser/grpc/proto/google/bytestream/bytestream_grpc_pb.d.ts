@@ -4,7 +4,7 @@
 // file: google/bytestream/bytestream.proto
 
 import * as google_bytestream_bytestream_pb from "../../google/bytestream/bytestream_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IByteStreamService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   read: grpc.MethodDefinition<google_bytestream_bytestream_pb.ReadRequest, google_bytestream_bytestream_pb.ReadResponse>;

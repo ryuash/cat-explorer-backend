@@ -4,7 +4,7 @@
 // file: cosmos/bank/v1beta1/query.proto
 
 import * as cosmos_bank_v1beta1_query_pb from "../../../cosmos/bank/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   balance: grpc.MethodDefinition<cosmos_bank_v1beta1_query_pb.QueryBalanceRequest, cosmos_bank_v1beta1_query_pb.QueryBalanceResponse>;

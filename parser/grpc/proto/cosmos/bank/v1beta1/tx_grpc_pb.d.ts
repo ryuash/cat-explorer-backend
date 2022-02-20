@@ -4,7 +4,7 @@
 // file: cosmos/bank/v1beta1/tx.proto
 
 import * as cosmos_bank_v1beta1_tx_pb from "../../../cosmos/bank/v1beta1/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   send: grpc.MethodDefinition<cosmos_bank_v1beta1_tx_pb.MsgSend, cosmos_bank_v1beta1_tx_pb.MsgSendResponse>;

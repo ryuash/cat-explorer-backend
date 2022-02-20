@@ -4,7 +4,7 @@
 // file: cosmos/gov/v1beta2/tx.proto
 
 import * as cosmos_gov_v1beta2_tx_pb from "../../../cosmos/gov/v1beta2/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   submitProposal: grpc.MethodDefinition<cosmos_gov_v1beta2_tx_pb.MsgSubmitProposal, cosmos_gov_v1beta2_tx_pb.MsgSubmitProposalResponse>;

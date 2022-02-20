@@ -4,7 +4,7 @@
 // file: cosmos/authz/v1beta1/query.proto
 
 import * as cosmos_authz_v1beta1_query_pb from "../../../cosmos/authz/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   grants: grpc.MethodDefinition<cosmos_authz_v1beta1_query_pb.QueryGrantsRequest, cosmos_authz_v1beta1_query_pb.QueryGrantsResponse>;

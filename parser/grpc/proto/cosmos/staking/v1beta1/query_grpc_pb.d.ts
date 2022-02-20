@@ -4,7 +4,7 @@
 // file: cosmos/staking/v1beta1/query.proto
 
 import * as cosmos_staking_v1beta1_query_pb from "../../../cosmos/staking/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   validators: grpc.MethodDefinition<cosmos_staking_v1beta1_query_pb.QueryValidatorsRequest, cosmos_staking_v1beta1_query_pb.QueryValidatorsResponse>;

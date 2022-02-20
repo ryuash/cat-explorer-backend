@@ -4,7 +4,7 @@
 // file: cosmos/distribution/v1beta1/tx.proto
 
 import * as cosmos_distribution_v1beta1_tx_pb from "../../../cosmos/distribution/v1beta1/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   setWithdrawAddress: grpc.MethodDefinition<cosmos_distribution_v1beta1_tx_pb.MsgSetWithdrawAddress, cosmos_distribution_v1beta1_tx_pb.MsgSetWithdrawAddressResponse>;

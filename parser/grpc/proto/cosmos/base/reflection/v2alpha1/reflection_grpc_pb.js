@@ -3,7 +3,7 @@
 // Original file comments:
 // Since: cosmos-sdk 0.43
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_base_reflection_v2alpha1_reflection_pb = require('../../../../cosmos/base/reflection/v2alpha1/reflection_pb.js');
 var google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
 

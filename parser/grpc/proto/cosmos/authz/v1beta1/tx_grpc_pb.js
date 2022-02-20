@@ -3,7 +3,7 @@
 // Original file comments:
 // Since: cosmos-sdk 0.43
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_authz_v1beta1_tx_pb = require('../../../cosmos/authz/v1beta1/tx_pb.js');
 var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');
 var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');

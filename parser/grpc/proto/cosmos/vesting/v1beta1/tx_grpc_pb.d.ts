@@ -4,7 +4,7 @@
 // file: cosmos/vesting/v1beta1/tx.proto
 
 import * as cosmos_vesting_v1beta1_tx_pb from "../../../cosmos/vesting/v1beta1/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createVestingAccount: grpc.MethodDefinition<cosmos_vesting_v1beta1_tx_pb.MsgCreateVestingAccount, cosmos_vesting_v1beta1_tx_pb.MsgCreateVestingAccountResponse>;

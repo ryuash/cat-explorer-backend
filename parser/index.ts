@@ -13,6 +13,7 @@ import {
 // Start the cron jobs (so we don't need to deal with a web socket)
 
 const start = async () => {
+  console.log('in here');
   // prepare selected modules to a list [] modules
   // each module will have handle block/ handle tx/ handle msg etc
   // pass it in to assign blocks to workers
@@ -21,14 +22,14 @@ const start = async () => {
   // await addBlocksToQueue();
   // assignBlocksToWorkers();
 
-  // baseClient.getLatestBlock(new GetLatestBlockRequest(), (err, result) => {
-  //   if (err) {
-  //     console.log(err);
-  //     return;
-  //   }
-  //   const showAll = result?.toObject();
-  //   console.log(util.inspect(showAll, false, null, true /* enable colors */));
-  // });
+  baseClient.getLatestBlock(new GetLatestBlockRequest(), (err, result) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    const showAll = result?.toObject();
+    console.log(util.inspect(showAll, false, null, true /* enable colors */));
+  });
 };
 
 start();

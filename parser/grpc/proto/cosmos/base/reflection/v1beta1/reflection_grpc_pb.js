@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_base_reflection_v1beta1_reflection_pb = require('../../../../cosmos/base/reflection/v1beta1/reflection_pb.js');
 var google_api_annotations_pb = require('../../../../google/api/annotations_pb.js');
 

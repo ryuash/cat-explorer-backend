@@ -3,7 +3,7 @@
 // Original file comments:
 // Since: cosmos-sdk 0.43
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_feegrant_v1beta1_tx_pb = require('../../../cosmos/feegrant/v1beta1/tx_pb.js');
 var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
 var cosmos_proto_cosmos_pb = require('../../../cosmos_proto/cosmos_pb.js');

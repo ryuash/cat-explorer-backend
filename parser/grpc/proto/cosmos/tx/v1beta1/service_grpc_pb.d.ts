@@ -4,7 +4,7 @@
 // file: cosmos/tx/v1beta1/service.proto
 
 import * as cosmos_tx_v1beta1_service_pb from "../../../cosmos/tx/v1beta1/service_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   simulate: grpc.MethodDefinition<cosmos_tx_v1beta1_service_pb.SimulateRequest, cosmos_tx_v1beta1_service_pb.SimulateResponse>;

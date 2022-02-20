@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "outDir": "dist",
+    "outDir": "dist/parser",
+    "allowJs": true,
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -21,10 +22,9 @@
       "@proto*": ["parser/grpc/proto/*"],
     }
   },
+  "include": ["parser/**/*"],
   "exclude":[
     "dist",
-    "node_modules",
-    "proto",
-    "db"
+    "node_modules"
   ]
 }

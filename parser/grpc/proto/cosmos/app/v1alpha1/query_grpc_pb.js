@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_app_v1alpha1_query_pb = require('../../../cosmos/app/v1alpha1/query_pb.js');
 var cosmos_app_v1alpha1_config_pb = require('../../../cosmos/app/v1alpha1/config_pb.js');
 

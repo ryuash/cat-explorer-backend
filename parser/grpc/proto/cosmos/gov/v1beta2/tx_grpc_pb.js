@@ -3,7 +3,7 @@
 // Original file comments:
 // Since: cosmos-sdk 0.46
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_gov_v1beta2_tx_pb = require('../../../cosmos/gov/v1beta2/tx_pb.js');
 var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');
 var cosmos_gov_v1beta2_gov_pb = require('../../../cosmos/gov/v1beta2/gov_pb.js');

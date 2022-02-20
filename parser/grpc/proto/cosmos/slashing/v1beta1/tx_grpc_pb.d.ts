@@ -4,7 +4,7 @@
 // file: cosmos/slashing/v1beta1/tx.proto
 
 import * as cosmos_slashing_v1beta1_tx_pb from "../../../cosmos/slashing/v1beta1/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   unjail: grpc.MethodDefinition<cosmos_slashing_v1beta1_tx_pb.MsgUnjail, cosmos_slashing_v1beta1_tx_pb.MsgUnjailResponse>;

@@ -4,7 +4,7 @@
 // file: cosmos/base/tendermint/v1beta1/query.proto
 
 import * as cosmos_base_tendermint_v1beta1_query_pb from "../../../../cosmos/base/tendermint/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   getNodeInfo: grpc.MethodDefinition<cosmos_base_tendermint_v1beta1_query_pb.GetNodeInfoRequest, cosmos_base_tendermint_v1beta1_query_pb.GetNodeInfoResponse>;

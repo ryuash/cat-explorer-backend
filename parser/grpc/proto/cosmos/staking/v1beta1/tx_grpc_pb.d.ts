@@ -4,7 +4,7 @@
 // file: cosmos/staking/v1beta1/tx.proto
 
 import * as cosmos_staking_v1beta1_tx_pb from "../../../cosmos/staking/v1beta1/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   createValidator: grpc.MethodDefinition<cosmos_staking_v1beta1_tx_pb.MsgCreateValidator, cosmos_staking_v1beta1_tx_pb.MsgCreateValidatorResponse>;

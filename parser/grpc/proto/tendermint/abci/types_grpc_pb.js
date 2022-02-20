@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var tendermint_abci_types_pb = require('../../tendermint/abci/types_pb.js');
 var tendermint_crypto_proof_pb = require('../../tendermint/crypto/proof_pb.js');
 var tendermint_types_types_pb = require('../../tendermint/types/types_pb.js');

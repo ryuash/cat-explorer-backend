@@ -4,7 +4,7 @@
 // file: cosmos/auth/v1beta1/query.proto
 
 import * as cosmos_auth_v1beta1_query_pb from "../../../cosmos/auth/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   accounts: grpc.MethodDefinition<cosmos_auth_v1beta1_query_pb.QueryAccountsRequest, cosmos_auth_v1beta1_query_pb.QueryAccountsResponse>;

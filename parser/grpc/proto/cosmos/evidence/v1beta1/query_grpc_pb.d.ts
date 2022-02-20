@@ -4,7 +4,7 @@
 // file: cosmos/evidence/v1beta1/query.proto
 
 import * as cosmos_evidence_v1beta1_query_pb from "../../../cosmos/evidence/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   evidence: grpc.MethodDefinition<cosmos_evidence_v1beta1_query_pb.QueryEvidenceRequest, cosmos_evidence_v1beta1_query_pb.QueryEvidenceResponse>;

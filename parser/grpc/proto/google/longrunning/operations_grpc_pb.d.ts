@@ -5,7 +5,7 @@
 
 import * as google_longrunning_operations_pb from "../../google/longrunning/operations_pb";
 import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IOperationsService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   listOperations: grpc.MethodDefinition<google_longrunning_operations_pb.ListOperationsRequest, google_longrunning_operations_pb.ListOperationsResponse>;

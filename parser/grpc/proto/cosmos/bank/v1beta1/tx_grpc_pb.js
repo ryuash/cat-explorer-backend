@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_bank_v1beta1_tx_pb = require('../../../cosmos/bank/v1beta1/tx_pb.js');
 var gogoproto_gogo_pb = require('../../../gogoproto/gogo_pb.js');
 var cosmos_base_v1beta1_coin_pb = require('../../../cosmos/base/v1beta1/coin_pb.js');

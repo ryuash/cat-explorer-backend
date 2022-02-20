@@ -4,7 +4,7 @@
 // file: cosmos/base/reflection/v2alpha1/reflection.proto
 
 import * as cosmos_base_reflection_v2alpha1_reflection_pb from "../../../../cosmos/base/reflection/v2alpha1/reflection_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IReflectionServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   getAuthnDescriptor: grpc.MethodDefinition<cosmos_base_reflection_v2alpha1_reflection_pb.GetAuthnDescriptorRequest, cosmos_base_reflection_v2alpha1_reflection_pb.GetAuthnDescriptorResponse>;

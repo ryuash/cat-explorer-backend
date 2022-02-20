@@ -4,7 +4,7 @@
 // file: cosmos/app/v1alpha1/query.proto
 
 import * as cosmos_app_v1alpha1_query_pb from "../../../cosmos/app/v1alpha1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   config: grpc.MethodDefinition<cosmos_app_v1alpha1_query_pb.QueryConfigRequest, cosmos_app_v1alpha1_query_pb.QueryConfigResponse>;

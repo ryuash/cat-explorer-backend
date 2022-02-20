@@ -4,7 +4,7 @@
 // file: tendermint/abci/types.proto
 
 import * as tendermint_abci_types_pb from "../../tendermint/abci/types_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IABCIApplicationService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   echo: grpc.MethodDefinition<tendermint_abci_types_pb.RequestEcho, tendermint_abci_types_pb.ResponseEcho>;

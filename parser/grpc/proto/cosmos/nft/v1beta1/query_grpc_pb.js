@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_nft_v1beta1_query_pb = require('../../../cosmos/nft/v1beta1/query_pb.js');
 var cosmos_base_query_v1beta1_pagination_pb = require('../../../cosmos/base/query/v1beta1/pagination_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');

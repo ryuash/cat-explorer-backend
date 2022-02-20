@@ -4,7 +4,7 @@
 // file: cosmos/base/reflection/v1beta1/reflection.proto
 
 import * as cosmos_base_reflection_v1beta1_reflection_pb from "../../../../cosmos/base/reflection/v1beta1/reflection_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IReflectionServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   listAllInterfaces: grpc.MethodDefinition<cosmos_base_reflection_v1beta1_reflection_pb.ListAllInterfacesRequest, cosmos_base_reflection_v1beta1_reflection_pb.ListAllInterfacesResponse>;

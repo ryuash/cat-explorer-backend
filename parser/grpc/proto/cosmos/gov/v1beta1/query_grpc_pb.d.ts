@@ -4,7 +4,7 @@
 // file: cosmos/gov/v1beta1/query.proto
 
 import * as cosmos_gov_v1beta1_query_pb from "../../../cosmos/gov/v1beta1/query_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IQueryService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   proposal: grpc.MethodDefinition<cosmos_gov_v1beta1_query_pb.QueryProposalRequest, cosmos_gov_v1beta1_query_pb.QueryProposalResponse>;

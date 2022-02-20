@@ -4,7 +4,7 @@
 // file: cosmos/evidence/v1beta1/tx.proto
 
 import * as cosmos_evidence_v1beta1_tx_pb from "../../../cosmos/evidence/v1beta1/tx_pb";
-import * as grpc from "grpc";
+import * as grpc from "@grpc/grpc-js";
 
 interface IMsgService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   submitEvidence: grpc.MethodDefinition<cosmos_evidence_v1beta1_tx_pb.MsgSubmitEvidence, cosmos_evidence_v1beta1_tx_pb.MsgSubmitEvidenceResponse>;

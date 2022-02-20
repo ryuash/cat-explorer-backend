@@ -3,7 +3,7 @@
 // Original file comments:
 // Since: cosmos-sdk 0.43
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var cosmos_feegrant_v1beta1_query_pb = require('../../../cosmos/feegrant/v1beta1/query_pb.js');
 var cosmos_feegrant_v1beta1_feegrant_pb = require('../../../cosmos/feegrant/v1beta1/feegrant_pb.js');
 var cosmos_base_query_v1beta1_pagination_pb = require('../../../cosmos/base/query/v1beta1/pagination_pb.js');
